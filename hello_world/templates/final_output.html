@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CN Project</title>
+    <link rel="stylesheet" "type=text/css" href="{% static 'css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <!--[if lt IE 9]>
+      <script src="{% static 'js/vendor/html5shiv.min.js' %} "></script>
+      <script src="{% static 'js/vendor/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-default probootstrap-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://shiny-tribble-4v6pxvggg96c64g-8000.app.github.dev/" ><img src="{% static 'img/dope.png'%}"></a>
+
+        </div>
+
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="#" data-nav-section="features">SLIDING WINDOW PROTOCOL</a></li>
+
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+    <section class="probootstrap-hero probootstrap-animate" style="background-image:url({% static 'img/dang.jpg'%});" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row intro-text">
+          <div class="col-md-8 col-md-offset-2 text-center">            
+            <h1 class="probootstrap-heading probootstrap-animate">given binary broken into<br></h1>                                                                  
+                                                                      {%for i in rawdata%}
+                                                                  <div class="probootstrap-subheading center">
+                                                                  <p class="probootstrap-animate"><a href=""  role="button" class="btn btn-primary">{{i}}</a>
+                                                                  </p>
+                                                                  </div>
+                                                                      {%endfor%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="{% static 'js/scripts.min.js'%}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+
+  </body>
+</html>
