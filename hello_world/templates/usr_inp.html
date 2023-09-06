@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CN Project</title>
+    <link rel="stylesheet" "type=text/css" href="{% static 'css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts3/material-design-iconic-font/css/material-design-iconic-font.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css4/style.css'%}">
+    <link href="{% static 'css1/style.css'%}"  rel="stylesheet"  type="text/css" >
+    <link href="{% static 'css1/style2.css' %}"  rel="stylesheet"  type="text/css" >
+
+    <!--[if lt IE 9]>
+      <script src="{% static 'rk/js/vendor/html5shiv.min.js' %} "></script>
+      <script src="{% static 'rk/js/vendor/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default probootstrap-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://shiny-tribble-4v6pxvggg96c64g-8000.app.github.dev/" ><img src="{% static 'img/dope.png'%}"></a>
+
+        </div>
+
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+
+            <li><a href="#" data-nav-section="features">SLIDING WINDOW PROTOCOL</a></li>
+
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+    <section class="probootstrap-hero probootstrap-animate" style="background-image:url({% static 'img/final.jpg'%});" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row intro-text">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h1 class="probootstrap-heading probootstrap-animate">
+                                                            
+                                                            {{ERROR}}
+                                                            <BR>
+                                                            FILL THE ASKED DETAILS</h1>
+                                                            
+  		        <div class="login-form">
+				        <form  action="inp_chk" method="GET" class="probootstrap-heading probootstrap-animate">
+                  
+                  {%csrf_token%}
+					          <input type="text"  name="frame_size" placeholder="Enter The Frame Size" required="" >
+					          <input type="text"  name="binary_data" placeholder="Enter The Binary Data To Be Transmitted " required="" >				
+                 
+                
+					        <input type="submit" value="Submit">
+				        </form>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+      </div>
+		</div>
+	</div>
+</div>
+</section>
+<script src="{% static 'js/scripts.min.js'%}"></script>
+<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+</html>

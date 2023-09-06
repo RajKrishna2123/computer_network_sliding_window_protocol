@@ -18,8 +18,15 @@ from django.urls import path, include
 
 from hello_world.core import views as core_views
 
+
 urlpatterns = [
     path("", core_views.index),
     path("admin/", admin.site.urls),
     path("__reload__/", include("django_browser_reload.urls")),
+    path('user_input', core_views.usr_inp ,name="mp"),
+    path('result', core_views.result ,name="rt"),
+    path('about', core_views.about ,name="ab"),
+    path('description', core_views.description ,name="ab"),
+    path('inp_chk', core_views.inp_chk ,name="ic"),
+    path('inp_chk/sliding_win_protocol', core_views.sliding_win_protocol ,name="swp"),
 ]

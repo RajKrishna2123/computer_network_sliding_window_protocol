@@ -1,26 +1,58 @@
-{% load django_browser_reload %}
 {% load static %}
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CN Project</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles-merged.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css'%}">
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
 
-<head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{% static 'main.css' %}">
-</head>
+    <!--[if lt IE 9]>
+      <script src="{% static 'js/vendor/html5shiv.min.js' %} "></script>
+      <script src="{% static 'js/vendor/respond.min.js' %}"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default probootstrap-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://shiny-tribble-4v6pxvggg96c64g-8000.app.github.dev/"><img src="{% static 'img/dope.png'%}"></a>
+        </div>
 
-<body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{% static 'Octocat.png' %}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Django
-            </p>
-            <p class="small">
-                Edit <code>hello_world/templates/index.html</code> and see changes live!
-            </p>
-        </header>
-    </div>
-</body>
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" data-nav-section="features">COMPUTER NETWORK PROJECT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
+    <section class="probootstrap-hero probootstrap-slant" style="background-image:url({% static 'img/bomb.jpg'%})" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row intro-text">
+          <div class="col-md-8 col-md-offset-2 text-center">
+            <h1 class="probootstrap-heading probootstrap-animate">Sliding Window Protocol</h1>
+            <div class="probootstrap-subheading center">
+              <p class="probootstrap-animate"><a href="https://shiny-tribble-4v6pxvggg96c64g-8000.app.github.dev/user_input" role="button" class="btn btn-primary">Get Started</a></p>
+              <p class="probootstrap-animate"><a href="https://shiny-tribble-4v6pxvggg96c64g-8000.app.github.dev/about" class="btn btn-default smoothscroll" role="button">ABOUT DEVELOPER</a></p>
+            </div>
+            <div class="probootstrap-subheading center">
+              <p class="probootstrap-animate"><a href="https://shiny-tribble-4v6pxvggg96c64g-8000.app.github.dev/description" role="button" class="btn btn-primary">PROJECT DESCRIPTION</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'js/scripts.min.js'%}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
 </html>
